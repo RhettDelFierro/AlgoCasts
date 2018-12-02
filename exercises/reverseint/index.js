@@ -8,6 +8,12 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-function reverseInt(n) {}
+function reverseInt(n) {
+    //mind the +/-
+    //mind the trailing 0's
+    //check each individual digit - possibly convert it to string.
+    //reverse the string.
+    //convert back to number.
+}
 
 module.exports = reverseInt;

@@ -15,6 +15,8 @@ function reverseInt(n) {
     .reverse()
     .join('');
 
+  // note: for the case when n = -15: 'reversed' willl be '51-' and parseInt() will fix this (but will return it back as 51 and not -51)
+  //parseInt and .toString() are inverses of each other.
   return parseInt(reversed) * Math.sign(n);
 }
 
