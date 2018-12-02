@@ -15,7 +15,7 @@ function capitalize(str) {
             const cap = c.toUpperCase()
             return [cap, ...rest].join('') //rejoin the capital letter with the rest of the string.
         })
-        .join(' ')
+        .join(' ') // put the sentence together.
 }
 
 module.exports = capitalize;

@@ -14,8 +14,10 @@
  *  b. ELSE: add it to the 'result'
  */
 function capitalize(str) {
+  // must capitalize first character in the string because the loop doesn't cover it:
   let result = str[0].toUpperCase();
 
+  // can't use for..of loop because for..of goes through the whole string, and we only want to go from the 2nd character on.
   for (let i = 1; i < str.length; i++) {
     if (str[i - 1] === ' ') {
       result += str[i].toUpperCase();
@@ -28,6 +30,8 @@ function capitalize(str) {
 }
 
 module.exports = capitalize;
+
+// somewhat a better solution:
 
 // function capitalize(str) {
 //   const words = [];
