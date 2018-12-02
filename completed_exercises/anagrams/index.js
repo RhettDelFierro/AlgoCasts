@@ -8,6 +8,8 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
+// comparing two sorted strings.
+// has performance concerns compare dto solution 1.
 function anagrams(stringA, stringB) {
   return cleanString(stringA) === cleanString(stringB);
 }

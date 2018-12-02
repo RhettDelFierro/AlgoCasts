@@ -8,6 +8,7 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
+// completed code is more exact.
 function anagrams(stringA, stringB) {
     const checkAB = stringA
         .toLowerCase()
