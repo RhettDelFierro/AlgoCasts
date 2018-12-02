@@ -7,6 +7,12 @@
 //   capitalize('a lazy fox') --> 'A Lazy Fox'
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
+/**
+ * 1. Create and empty string called 'result'
+ * 2. for each character in the string:
+ *  a. IF: the character to the left is a space - capitalize it and add it to 'result'
+ *  b. ELSE: add it to the 'result'
+ */
 function capitalize(str) {
   let result = str[0].toUpperCase();
 
