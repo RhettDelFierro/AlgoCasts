@@ -15,6 +15,8 @@ function maxChar(str) {
   let max = 0;
   let maxChar = '';
 
+  // note the for..in vs for..o notation.
+
   for (let char of str) {
     if (charMap[char]) {
       charMap[char]++;
@@ -23,6 +25,7 @@ function maxChar(str) {
     }
   }
 
+  // compare to the cached max
   for (let char in charMap) {
     if (charMap[char] > max) {
       max = charMap[char];

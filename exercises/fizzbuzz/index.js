@@ -12,6 +12,26 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+const isDivisible = x => y => y % x === 0
+const isDivisibleByThree = isDivisible(3)
+const isDivisibleByFive = isDivisible(5)
+const isDivisibleByThreeAndFive = n => isDivisibleByThree(n) && isDivisibleByFive(n)
+
+const generateTerm = (n) => {
+    if (isDivisibleByThreeAndFive(n)) return "fizzbuzz"
+    if (isDivisibleByThree(n)) return "fizz"
+    if (isDivisibleByFive(n)) return "buzz"
+    return n
+}
+
+function fizzBuzz(n) {
+    // get a range of ints starting from 1:
+    const ints = [...Array(n).keys()].map(i => i + 1) // [1,2,3,4,5...]
+    const results = ints.reduce((acc, n) => {
+        return [...acc, generateTerm(n)]
+    }, [])
+
+    results.forEach(console.log)
+}
 
 module.exports = fizzBuzz;
